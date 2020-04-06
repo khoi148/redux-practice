@@ -1,26 +1,19 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import { useSelector, useDispatch } from "react-redux";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Counter from "components/Counter";
+import Display from "components/Display";
+import Header from "components/Header";
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="container pt-5 border bg-dark text-light">
+        <Header />
+        <Counter />
+        <Display />
+      </div>
     </div>
   );
 }
-
-export default App;
