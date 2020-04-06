@@ -27,6 +27,12 @@ export default function Counter() {
         >
           Reset
         </button>
+        <input
+          id="listinput"
+          onChange={(e) =>
+            dispatch({ type: "LISTCOLOR", payload: e.target.value })
+          }
+        />
       </div>
     </div>
   );
